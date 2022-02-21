@@ -5,7 +5,7 @@ List your links, style them and generate a single HTML file and host it on your 
 
 ![link-gen preview](https://cdn.hashnode.com/res/hashnode/image/upload/v1645471440846/93CkFBdE-.png)
 
-Live: [Link-gen](link-gen.netlify.app)
+Live: [Link-gen](https://link-gen.netlify.app/)
 
 ## Contribution ✨
 - contributions are greatly appreciated
