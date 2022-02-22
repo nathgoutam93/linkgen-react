@@ -3,7 +3,7 @@ import Header from "./components/header";
 import Editor from "./components/Editor";
 import Appearance from "./components/appearance";
 import Preview from "./components/Preview";
-import { useCode } from "./components/code";
+import { useCode } from "./hooks/code";
 import { HiOutlineLink, HiOutlinePencil } from "react-icons/hi";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsBrush } from "react-icons/bs";

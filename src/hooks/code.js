@@ -1,7 +1,7 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { useAdmin } from "../context/adminContext";
-import StaticPage from "./staticPage";
+import StaticPage from "../components/staticPage";
 
 function useCode() {
   const { state } = useAdmin();
@@ -36,6 +36,7 @@ function useCode() {
       *::before {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
       
       .page {
