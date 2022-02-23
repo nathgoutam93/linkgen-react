@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
 import PropTytpes from "prop-types";
 import { initialState, adminReducer } from "../reducers/adminReducer";
 
@@ -10,6 +10,35 @@ export function useAdmin() {
 
 export function AdminProvider({ children }) {
   const [state, dispatch] = useReducer(adminReducer, initialState);
+
+  useEffect(() => {
+    dispatch({
+      type: "field",
+      field: "imgSrc",
+      value: JSON.parse(localStorage.getItem("imgSrc")) || state.imgSrc,
+    });
+    dispatch({
+      type: "field",
+      field: "profileName",
+      value:
+        JSON.parse(localStorage.getItem("profileName")) || state.profileName,
+    });
+    dispatch({
+      type: "field",
+      field: "about",
+      value: JSON.parse(localStorage.getItem("about")) || state.about,
+    });
+    dispatch({
+      type: "field",
+      field: "links",
+      value: JSON.parse(localStorage.getItem("links")) || state.links,
+    });
+    dispatch({
+      type: "field",
+      field: "appearance",
+      value: JSON.parse(localStorage.getItem("appearance")) || state.appearance,
+    });
+  }, []);
 
   const value = { state, dispatch };
 
