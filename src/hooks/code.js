@@ -86,7 +86,7 @@ function useCode() {
 
       .link-wrapper {
         padding: 1rem;
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
