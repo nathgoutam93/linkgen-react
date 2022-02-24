@@ -19,6 +19,14 @@ const initialState = {
     linkColor: "#171717",
     linkFontColor: "#fff",
   },
+  socials: {
+    twitter: "",
+    instagram: "",
+    facebook: "",
+    linkedin: "",
+    github: "",
+    hashnode: "",
+  },
 };
 
 function adminReducer(state, action) {

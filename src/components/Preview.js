@@ -6,7 +6,7 @@ import Page from "./page";
 
 export default function Preview({ preview }) {
   const { state } = useAdmin();
-  const { imgSrc, profileName, about, links, appearance } = state;
+  const { imgSrc, profileName, about, links, appearance, socials } = state;
 
   return (
     <div
@@ -25,6 +25,7 @@ export default function Preview({ preview }) {
         about={about}
         links={links}
         appearance={appearance}
+        socials={socials}
       />
     </div>
   );

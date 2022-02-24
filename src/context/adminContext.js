@@ -38,6 +38,11 @@ export function AdminProvider({ children }) {
       field: "appearance",
       value: JSON.parse(localStorage.getItem("appearance")) || state.appearance,
     });
+    dispatch({
+      type: "field",
+      field: "socials",
+      value: JSON.parse(localStorage.getItem("socials")) || state.appearance,
+    });
   }, []);
 
   const value = { state, dispatch };

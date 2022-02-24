@@ -2,6 +2,14 @@ import React from "react";
 import LinkCard from "../components/LinkCard";
 import PropTypes from "prop-types";
 import { BsPersonFill } from "react-icons/bs";
+import { SiHashnode } from "react-icons/si";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+  FiInstagram,
+  FiFacebook,
+} from "react-icons/fi";
 import Embed from "./Embed";
 
 export default function Page({
@@ -10,6 +18,7 @@ export default function Page({
   about,
   links,
   appearance,
+  socials,
   styleClasses,
 }) {
   const {
@@ -78,6 +87,54 @@ export default function Page({
             );
           })}
       </div>
+      <div className="w-3/4 flex flex-wrap justify-center items-center">
+        {socials.twitter && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://twitter.com/${socials.twitter}`}
+          >
+            <FiTwitter size={45} className="m-2" />
+          </a>
+        )}
+        {socials.instagram && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://instagram.com/${socials.instagram}`}
+          >
+            <FiInstagram size={45} className="m-1" />
+          </a>
+        )}
+        {socials.facebook && (
+          <a rel="noreferrer" target="_blank" href={socials.facebook}>
+            <FiFacebook size={45} className="m-1" />
+          </a>
+        )}
+        {socials.linkedin && (
+          <a rel="noreferrer" target="_blank" href={socials.linkedin}>
+            <FiLinkedin size={45} className="m-1" />
+          </a>
+        )}
+        {socials.github && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://github.com/${socials.github}`}
+          >
+            <FiGithub size={45} className="m-1" />
+          </a>
+        )}
+        {socials.hashnode && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://hashnode.com/@${socials.hashnode}`}
+          >
+            <SiHashnode size={45} className="m-1" />
+          </a>
+        )}
+      </div>
     </div>
   );
 }
@@ -89,5 +146,6 @@ Page.propTypes = {
   about: PropTypes.string,
   links: PropTypes.array,
   appearance: PropTypes.object,
+  socials: PropTypes.object,
   styleClasses: PropTypes.string,
 };

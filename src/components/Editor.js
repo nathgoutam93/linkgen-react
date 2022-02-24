@@ -6,6 +6,7 @@ import ProfileCard from "./ProfileCard";
 import { HiOutlineLink } from "react-icons/hi";
 import EmbedEditable from "./EmbedEditable";
 import EmbedModal from "./embedModal";
+import SocialIconCard from "./SocialIconCard";
 
 export default function Editor() {
   const { state, dispatch } = useAdmin();
@@ -95,6 +96,7 @@ export default function Editor() {
           <EmbedModal />
         </div>
       )}
+      <SocialIconCard />
     </>
   );
 }

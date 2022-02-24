@@ -2,6 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BsPersonFill } from "react-icons/bs";
 import * as EMBED from "../constants/embed";
+import { SiHashnode } from "react-icons/si";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+  FiInstagram,
+  FiFacebook,
+} from "react-icons/fi";
 
 function LinkCard({ link }) {
   return (
@@ -68,7 +76,13 @@ function Embed({ link }) {
   );
 }
 
-export default function StaticPage({ imgSrc, profileName, about, links }) {
+export default function StaticPage({
+  imgSrc,
+  profileName,
+  about,
+  links,
+  socials,
+}) {
   return (
     <div className="page">
       {imgSrc ? (
@@ -98,6 +112,68 @@ export default function StaticPage({ imgSrc, profileName, about, links }) {
             return <LinkCard key={link.title} link={link} />;
           })}
       </div>
+      <div className="socials-container">
+        {socials.twitter && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={`https://twitter.com/${socials.twitter}`}
+          >
+            <FiTwitter size={45} className="m-2" />
+          </a>
+        )}
+        {socials.instagram && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={`https://instagram.com/${socials.instagram}`}
+          >
+            <FiInstagram size={45} className="m-1" />
+          </a>
+        )}
+        {socials.facebook && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={socials.facebook}
+          >
+            <FiFacebook size={45} className="m-1" />
+          </a>
+        )}
+        {socials.linkedin && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={socials.linkedin}
+          >
+            <FiLinkedin size={45} className="m-1" />
+          </a>
+        )}
+        {socials.github && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={`https://github.com/${socials.github}`}
+          >
+            <FiGithub size={45} className="m-1" />
+          </a>
+        )}
+        {socials.hashnode && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={`https://hashnode.com/@${socials.hashnode}`}
+          >
+            <SiHashnode size={45} className="m-1" />
+          </a>
+        )}
+      </div>
     </div>
   );
 }
@@ -118,4 +194,5 @@ StaticPage.propTypes = {
   profileName: PropTypes.string,
   about: PropTypes.string,
   links: PropTypes.array,
+  socials: PropTypes.object,
 };

@@ -5,7 +5,7 @@ import StaticPage from "../components/staticPage";
 
 function useCode() {
   const { state } = useAdmin();
-  const { imgSrc, profileName, about, links, appearance } = state;
+  const { imgSrc, profileName, about, links, appearance, socials } = state;
   const {
     background,
     backgroundColor,
@@ -134,6 +134,18 @@ function useCode() {
         max-width: 42rem;
         margin: 0.25rem;
       }
+
+      .socials-container {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .social-icon{
+        margin: 0.5rem;
+        color: ${fontColor}
+      }
       </style>
       <body>
         ${renderToStaticMarkup(
@@ -143,6 +155,7 @@ function useCode() {
             about={about}
             links={links}
             appearance={appearance}
+            socials={socials}
           />,
         )}
         </body>
