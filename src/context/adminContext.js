@@ -41,7 +41,7 @@ export function AdminProvider({ children }) {
     dispatch({
       type: "field",
       field: "socials",
-      value: JSON.parse(localStorage.getItem("socials")) || state.appearance,
+      value: JSON.parse(localStorage.getItem("socials")) || state.socials,
     });
   }, []);
 
