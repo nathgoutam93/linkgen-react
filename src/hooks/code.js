@@ -102,7 +102,7 @@ function useCode() {
         width: 100%;
         max-width: 56rem;
         min-height: 4rem;
-        padding: 0 1rem;
+        padding: 0.5rem;
         margin: 0.5rem 0;
         display: flex;
         justify-content: center;
@@ -112,24 +112,27 @@ function useCode() {
       }
 
       .link-card {
+        width: 100%;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        margin: 0 0.25rem;
       }
-
+      
       .link-title {
         font-size: 1.125rem;
         line-height: 1.75rem;
         font-weight: 600;
       }
-
+      
       .link-description {
         font-size: 0.875rem;
         line-height: 1.25rem;
         font-weight: 300;
         max-width: 42rem;
+        margin: 0.25rem;
       }
       </style>
       <body>

@@ -2,6 +2,7 @@ import React from "react";
 import LinkCard from "../components/LinkCard";
 import PropTypes from "prop-types";
 import { BsPersonFill } from "react-icons/bs";
+import Embed from "./Embed";
 
 export default function Page({
   imgSrc,
@@ -56,6 +57,16 @@ export default function Page({
         {links
           ?.filter((link) => link.active !== false && link.title && link.link)
           .map((link) => {
+            if (link.embed)
+              return (
+                <Embed
+                  key={link.title}
+                  link={link}
+                  linkColor={linkColor}
+                  linkFontColor={linkFontColor}
+                  linkStyle={linkStyle}
+                />
+              );
             return (
               <LinkCard
                 key={link.title}
