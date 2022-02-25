@@ -3,6 +3,9 @@ import LinkCard from "../components/LinkCard";
 import PropTypes from "prop-types";
 import { BsPersonFill } from "react-icons/bs";
 import { SiHashnode } from "react-icons/si";
+import { FaDev } from "react-icons/fa";
+import { GrMedium } from "react-icons/gr";
+import { ImWhatsapp } from "react-icons/im";
 import {
   FiGithub,
   FiLinkedin,
@@ -132,6 +135,33 @@ export default function Page({
             href={`https://hashnode.com/@${socials.hashnode}`}
           >
             <SiHashnode size={45} className="m-1" />
+          </a>
+        )}
+        {socials.devto && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://dev.to/@${socials.devto}`}
+          >
+            <FaDev size={45} className="m-1" />
+          </a>
+        )}
+        {socials.medium && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://medium.com/@${socials.devto}`}
+          >
+            <GrMedium size={45} className="m-1" />
+          </a>
+        )}
+        {socials.whatsapp && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://api.whatsapp.com/send?phone=${socials.whatsapp}`}
+          >
+            <ImWhatsapp size={45} className="m-1" />
           </a>
         )}
       </div>

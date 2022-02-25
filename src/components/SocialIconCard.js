@@ -3,7 +3,7 @@ import { useAdmin } from "../context/adminContext";
 
 export default function SocialIconCard() {
   const { state, dispatch } = useAdmin();
-  const { twitter, instagram, facebook, linkedin, github, hashnode } =
+  const { twitter, instagram, facebook, linkedin, github, hashnode, devto, medium, whatsapp } =
     state.socials;
 
   return (
@@ -79,6 +79,42 @@ export default function SocialIconCard() {
           })
         }
         placeholder="@hashnode-handle"
+        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
+      ></input>
+      <input
+        value={devto}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "socials",
+            value: { ...state.socials, devto: e.target.value },
+          })
+        }
+        placeholder="@dev.to-handle"
+        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
+      ></input>
+      <input
+        value={medium}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "socials",
+            value: { ...state.socials, medium: e.target.value },
+          })
+        }
+        placeholder="@medium-handle"
+        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
+      ></input>
+      <input
+        value={whatsapp}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "socials",
+            value: { ...state.socials, whatsapp: e.target.value },
+          })
+        }
+        placeholder="whatsapp number"
         className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
       ></input>
     </div>
