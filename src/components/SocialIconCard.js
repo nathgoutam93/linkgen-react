@@ -81,6 +81,7 @@ export default function SocialIconCard() {
         placeholder="@hashnode-handle"
         className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
       ></input>
+      {/* Added dev.to link */}
       <input
         value={devto}
         onChange={(e) =>
@@ -93,6 +94,7 @@ export default function SocialIconCard() {
         placeholder="@dev.to-handle"
         className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
       ></input>
+      {/* Added medium link */}
       <input
         value={medium}
         onChange={(e) =>
@@ -105,6 +107,7 @@ export default function SocialIconCard() {
         placeholder="@medium-handle"
         className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
       ></input>
+      {/* Added whatsapp link */}
       <input
         value={whatsapp}
         onChange={(e) =>
@@ -119,4 +122,4 @@ export default function SocialIconCard() {
       ></input>
     </div>
   );
-}
+};
