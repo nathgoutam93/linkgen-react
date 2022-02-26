@@ -1,15 +1,26 @@
 import React from "react";
 import { useAdmin } from "../context/adminContext";
+import InputField from "./commons/inputField";
 
 export default function SocialIconCard() {
   const { state, dispatch } = useAdmin();
-  const { twitter, instagram, facebook, linkedin, github, hashnode, devto, medium, whatsapp } =
-    state.socials;
+  const {
+    twitter,
+    instagram,
+    facebook,
+    linkedin,
+    github,
+    hashnode,
+    devto,
+    medium,
+    whatsapp,
+  } = state.socials;
 
   return (
     <div className="w-full p-5 flex flex-col items-center bg-secondary space-y-4 rounded-xl border border-border-dark">
       <span className="text-white text-xl font-nunito">Social Icons</span>
-      <input
+      <InputField
+        label="twitter handle"
         value={twitter}
         onChange={(e) =>
           dispatch({
@@ -18,10 +29,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, twitter: e.target.value },
           })
         }
-        placeholder="@twitter-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      <input
+      />
+      <InputField
+        label="Instagram handle"
         value={instagram}
         onChange={(e) =>
           dispatch({
@@ -30,10 +40,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, instagram: e.target.value },
           })
         }
-        placeholder="@instgram-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      <input
+      />
+      <InputField
+        label="Facebook url"
         value={facebook}
         onChange={(e) =>
           dispatch({
@@ -42,10 +51,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, facebook: e.target.value },
           })
         }
-        placeholder="facebook url"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      <input
+      />
+      <InputField
+        label="LinkedIn url"
         value={linkedin}
         onChange={(e) =>
           dispatch({
@@ -54,10 +62,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, linkedin: e.target.value },
           })
         }
-        placeholder="LinkedIn url"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      <input
+      />
+      <InputField
+        label="github handle"
         value={github}
         onChange={(e) =>
           dispatch({
@@ -66,10 +73,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, github: e.target.value },
           })
         }
-        placeholder="@github-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      <input
+      />
+      <InputField
+        label="hashnode handle"
         value={hashnode}
         onChange={(e) =>
           dispatch({
@@ -78,11 +84,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, hashnode: e.target.value },
           })
         }
-        placeholder="@hashnode-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      {/* Added dev.to link */}
-      <input
+      />
+      <InputField
+        label="dev.to handle"
         value={devto}
         onChange={(e) =>
           dispatch({
@@ -91,11 +95,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, devto: e.target.value },
           })
         }
-        placeholder="@dev.to-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      {/* Added medium link */}
-      <input
+      />
+      <InputField
+        label="medium handle"
         value={medium}
         onChange={(e) =>
           dispatch({
@@ -104,11 +106,9 @@ export default function SocialIconCard() {
             value: { ...state.socials, medium: e.target.value },
           })
         }
-        placeholder="@medium-handle"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
-      {/* Added whatsapp link */}
-      <input
+      />
+      <InputField
+        label="Whatsapp number"
         value={whatsapp}
         onChange={(e) =>
           dispatch({
@@ -117,9 +117,7 @@ export default function SocialIconCard() {
             value: { ...state.socials, whatsapp: e.target.value },
           })
         }
-        placeholder="whatsapp number"
-        className="w-full p-2 text-white bg-primary font-bold rounded-md outline-none"
-      ></input>
+      />
     </div>
   );
-};
+}

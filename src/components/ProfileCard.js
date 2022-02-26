@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useAdmin } from "../context/adminContext";
 import { BsPersonFill } from "react-icons/bs";
+import InputFieldSimple from "./commons/inputFieldSimple";
 
 export default function ProfileCard() {
   const { state, dispatch } = useAdmin();
@@ -63,22 +64,18 @@ export default function ProfileCard() {
           </label>
         </div>
       </div>
-      <div className="w-full space-y-1">
-        <label className="text-sm text-white font-nunito">Profile Title</label>
-        <input
-          value={profileName}
-          onChange={(e) =>
-            dispatch({
-              type: "field",
-              field: "profileName",
-              value: e.target.value,
-            })
-          }
-          type="text"
-          className="w-full p-2 px-4 bg-primary text-white outline-none rounded-md"
-          placeholder="Profile Name"
-        ></input>
-      </div>
+      <InputFieldSimple
+        label="Profile Title"
+        value={profileName}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "profileName",
+            value: e.target.value,
+          })
+        }
+        placeholder="your name"
+      />
       <div className="w-full space-y-1">
         <label className="text-sm text-white font-nunito">
           Profile Description

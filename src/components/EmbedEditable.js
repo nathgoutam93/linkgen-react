@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import * as EMBED from "../constants/embed";
 import { AiFillYoutube } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
+import InputField from "./commons/inputField";
 
 export default function EmbedEditable({ id, Link }) {
   const { state, dispatch } = useAdmin();
@@ -131,18 +132,16 @@ export default function EmbedEditable({ id, Link }) {
               </>
             ) : (
               <div className="p-4 flex flex-1 flex-col space-y-4 bg-secondary rounded-xl">
-                <input
+                <InputField
+                  label="Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Title"
-                  className="p-2 text-white bg-primary font-bold rounded-md outline-none"
-                ></input>
-                <input
+                />
+                <InputField
+                  label="url"
                   value={link}
                   onChange={(e) => setLink(e.target.value)}
-                  placeholder="Link"
-                  className="p-2 text-white bg-primary font-semibold rounded-md outline-none"
-                ></input>
+                />
                 <div className="flex justify-around items-center space-x-2">
                   <button
                     onClick={handleCancel}
