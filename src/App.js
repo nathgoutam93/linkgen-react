@@ -127,7 +127,7 @@ export default function App() {
                 onClick={() => setShowDesign(false)}
                 className="flex flex-col justify-center items-center cursor-pointer"
               >
-                <HiOutlineLink size={45} className="text-gray-50" />
+                <HiOutlineLink size={45} className="text-gray-400" />
                 <span className="text-lg text-gray-50 font-nunito">Links</span>
               </div>
             ) : (
@@ -135,7 +135,7 @@ export default function App() {
                 onClick={() => setShowDesign(true)}
                 className="flex flex-col justify-center items-center cursor-pointer"
               >
-                <BsBrush size={45} className="text-gray-50" />
+                <BsBrush size={45} className="text-gray-400" />
                 <span className="text-lg text-gray-50 font-nunito">Design</span>
               </div>
             )}
@@ -143,7 +143,7 @@ export default function App() {
               onClick={() => setPreview(true)}
               className="flex flex-col justify-center items-center cursor-pointer"
             >
-              <AiOutlineEye size={45} className="text-gray-50" />
+              <AiOutlineEye size={45} className="text-gray-400" />
               <span className="text-lg text-gray-50 font-nunito">Preview</span>
             </div>
             <div

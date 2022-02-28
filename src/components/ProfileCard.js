@@ -41,7 +41,7 @@ export default function ProfileCard() {
           />
         ) : (
           <div className="p-6 h-32 w-32 rounded-full border border-border-dark">
-            <BsPersonFill className="h-full w-full text-gray-400" />
+            <BsPersonFill className="h-full w-full text-border-dark" />
           </div>
         )}
         <div className="w-full lg:w-auto lg:flex-1 flex justify-evenly items-center space-x-1">
@@ -74,7 +74,7 @@ export default function ProfileCard() {
             value: e.target.value,
           })
         }
-        placeholder="your name"
+        placeholder="@yourname"
       />
       <div className="w-full space-y-1">
         <label className="text-sm text-white font-nunito">

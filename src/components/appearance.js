@@ -6,7 +6,8 @@ import { MdAddPhotoAlternate } from "react-icons/md";
 export default function Appearance() {
   const { state, dispatch } = useAdmin();
   const { bgImgFile, appearance } = state;
-  const { background, backgroundColor, linkColor, linkStyle } = appearance;
+  const { background, backgroundColor, linkColor, linkFontColor, linkStyle } =
+    appearance;
 
   const backgroundPresetColors = [
     "#000000",
@@ -200,6 +201,7 @@ export default function Appearance() {
           <div className="p-4 text-center flex flex-col justify-between items-center space-y-2">
             <div className="w-full grid grid-cols-2 gap-1 rounded-xl">
               <button
+                style={{ backgroundColor: linkColor, color: linkFontColor }}
                 onClick={() => {
                   dispatch({
                     type: "field",
@@ -210,11 +212,12 @@ export default function Appearance() {
                     },
                   });
                 }}
-                className="p-2 text-white bg-gray-700 rounded-lg"
+                className="p-2 rounded-lg"
               >
                 Rectangular
               </button>
               <button
+                style={{ backgroundColor: linkColor, color: linkFontColor }}
                 onClick={() => {
                   dispatch({
                     type: "field",
@@ -225,11 +228,12 @@ export default function Appearance() {
                     },
                   });
                 }}
-                className="p-2 text-white bg-gray-700 rounded-3xl"
+                className="p-2 rounded-3xl"
               >
                 Rounded
               </button>
               <button
+                style={{ backgroundColor: linkColor, color: linkFontColor }}
                 onClick={() => {
                   dispatch({
                     type: "field",
@@ -240,13 +244,14 @@ export default function Appearance() {
                     },
                   });
                 }}
-                className={`p-2 text-white bg-gray-700 ${
+                className={`p-2 ${
                   linkStyle.rounded ? "rounded-3xl" : "rounded-md"
                 }`}
               >
                 Filled
               </button>
               <button
+                style={{ color: linkFontColor }}
                 onClick={() => {
                   dispatch({
                     type: "field",
@@ -257,7 +262,7 @@ export default function Appearance() {
                     },
                   });
                 }}
-                className={`p-2 text-white bg-transparent ${
+                className={`p-2 ${
                   linkStyle.rounded ? "rounded-3xl" : "rounded-md"
                 } border-2`}
               >
