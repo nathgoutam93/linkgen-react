@@ -10,7 +10,7 @@ import { BsBrush } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
 
 export default function App() {
-  const { formattedCode } = useCode();
+  const { getCode } = useCode();
   const [preview, setPreview] = useState(false);
   const [showDesign, setShowDesign] = useState(false);
 
@@ -31,7 +31,8 @@ export default function App() {
   }
 
   const handleDownload = () => {
-    download("index.html", formattedCode);
+    const generatedCode = getCode();
+    download("index.html", generatedCode);
   };
 
   return (
