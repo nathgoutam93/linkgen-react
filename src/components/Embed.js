@@ -7,7 +7,7 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
 
   const spotifyRegex = /(?<=(com\/))(?:...)+/;
 
-  if (link.embed === EMBED.YOUTUBE)
+  if (link.embed === EMBED.YOUTUBE && !!youtubeRegex.exec(link.link))
     return (
       <a
         href={`https://www.youtube.com/watch?v=${
@@ -34,6 +34,30 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
         <p className="text-sm text-center font-light max-w-2xl">{link.title}</p>
       </a>
     );
+  if (link.embed === EMBED.SPOTIFY && !!spotifyRegex.exec(link.link))
+    return (
+      <div
+        style={{
+          background: linkStyle.filled ? linkColor : "",
+          border: linkStyle.filled ? "none" : `2px solid ${linkColor}`,
+          color: linkFontColor,
+        }}
+        className={`relative w-full max-w-4xl min-h-[4rem] p-4 flex flex-col justify-center items-center ${
+          linkStyle.rounded ? "rounded-3xl" : "rounded-md"
+        } space-y-2`}
+      >
+        <iframe
+          style={{ borderRadius: "12px" }}
+          src={`https://open.spotify.com/embed/${
+            spotifyRegex.exec(link.link)[0]
+          }`}
+          width="100%"
+          height="80"
+          frameBorder="0"
+        ></iframe>
+        <p className="text-sm text-center font-light max-w-2xl">{link.title}</p>
+      </div>
+    );
   return (
     <div
       style={{
@@ -45,16 +69,7 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
         linkStyle.rounded ? "rounded-3xl" : "rounded-md"
       } space-y-2`}
     >
-      <iframe
-        style={{ borderRadius: "12px" }}
-        src={`https://open.spotify.com/embed/${
-          spotifyRegex.exec(link.link)[0]
-        }`}
-        width="100%"
-        height="80"
-        frameBorder="0"
-      ></iframe>
-      <p className="text-sm text-center font-light max-w-2xl">{link.title}</p>
+      Invalid Link
     </div>
   );
 }
