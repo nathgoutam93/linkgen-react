@@ -7,7 +7,10 @@
 
 @layer base {
   #root {
-    background-color: #0a1929;
+    background-color: #fff;
+  }
+  .dark #root {
+    background-color: #e5e7eb;
   }
 }
 

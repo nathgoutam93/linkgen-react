@@ -67,7 +67,7 @@ export default function Appearance() {
 
   return (
     <>
-      <div className="p-4 bg-secondary rounded-xl space-y-2 border border-border-dark">
+      <div className="p-4 bg-white dark:bg-secondary rounded-xl space-y border-gray-300-dark:2 border border-gray-300 dark:border-border-dark">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
           <div className="picker text-center rounded-3xl">
             <HexColorPicker
@@ -100,7 +100,9 @@ export default function Appearance() {
                 />
               ))}
             </div>
-            <label className="text-white">Background Color</label>
+            <label className="text-gray-800 dark:text-white">
+              Background Color
+            </label>
           </div>
           <div className="w-full text-center rounded-xl space-y-2">
             <div className="p-2 pt-0 space-y-2">
@@ -136,12 +138,14 @@ export default function Appearance() {
                 </label>
               </div>
             </div>
-            <label className="text-white">Background Image</label>
+            <label className="text-gray-800 dark:text-white">
+              Background Image
+            </label>
           </div>
         </div>
       </div>
-      <div className="p-4 bg-secondary rounded-xl border border-border-dark">
-        <label className="text-white">Font Color</label>
+      <div className="p-4 bg-white dark:bg-secondary rounded-xl border border-gray-300 dark:border-border-dark">
+        <label className="text-gray-800 dark:text-white">Font Color</label>
         <div className="p-2 flex space-x-4">
           {fontColors.map((presetColor) => (
             <button
@@ -163,7 +167,7 @@ export default function Appearance() {
         </div>
       </div>
 
-      <div className="p-4 bg-secondary rounded-xl space-y-2 border border-border-dark">
+      <div className="p-4 bg-white dark:bg-secondary rounded-xl space-y-2 border border-gray-300 dark:border-border-dark">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
           <div className="picker text-center rounded-xl">
             <HexColorPicker
@@ -196,7 +200,9 @@ export default function Appearance() {
                 />
               ))}
             </div>
-            <label className="text-white">Button Color</label>
+            <label className="text-gray-800 dark:text-white">
+              Button Color
+            </label>
           </div>
           <div className="p-4 text-center flex flex-col justify-between items-center space-y-2">
             <div className="w-full grid grid-cols-2 gap-1 rounded-xl">
@@ -251,7 +257,6 @@ export default function Appearance() {
                 Filled
               </button>
               <button
-                style={{ color: linkFontColor }}
                 onClick={() => {
                   dispatch({
                     type: "field",
@@ -264,17 +269,21 @@ export default function Appearance() {
                 }}
                 className={`p-2 ${
                   linkStyle.rounded ? "rounded-3xl" : "rounded-md"
-                } border-2`}
+                } border-2 text-gray-400`}
               >
                 Outline
               </button>
             </div>
-            <label className="text-white">Button Style</label>
+            <label className="text-gray-800 dark:text-white">
+              Button Style
+            </label>
           </div>
         </div>
       </div>
-      <div className="p-4 bg-secondary rounded-xl border border-border-dark">
-        <label className="text-white">Button Font Color</label>
+      <div className="p-4 bg-white dark:bg-secondary rounded-xl border border-gray-300 dark:border-border-dark">
+        <label className="text-gray-800 dark:text-white">
+          Button Font Color
+        </label>
         <div className="p-2 flex space-x-4">
           {linkfontColors.map((presetColor) => (
             <button

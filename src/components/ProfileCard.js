@@ -31,17 +31,17 @@ export default function ProfileCard() {
   }, [imgFile]);
 
   return (
-    <div className="w-full p-10 pt-2 flex flex-col items-center bg-secondary space-y-4 rounded-xl border border-border-dark">
+    <div className="w-full p-10 pt-2 flex flex-col items-center bg-white dark:bg-secondary space-y-4 rounded-xl border border-gray-300 dark:border-border-dark">
       <div className="mt-4 w-full flex flex-col lg:flex-row justify-around items-center lg:space-x-4 space-y-2 lg:space-y-0">
         {imgSrc ? (
           <img
             src={imgSrc}
             alt=""
-            className="w-32 h-32 rounded-full object-cover border border-border-dark"
+            className="w-32 h-32 rounded-full object-cover border border-gray-300 dark:border-border-dark"
           />
         ) : (
-          <div className="p-6 h-32 w-32 rounded-full border border-border-dark">
-            <BsPersonFill className="h-full w-full text-border-dark" />
+          <div className="p-6 h-32 w-32 rounded-full border border-gray-300 dark:border-border-dark">
+            <BsPersonFill className="h-full w-full text-gray-400 dark:text-border-dark" />
           </div>
         )}
         <div className="w-full lg:w-auto lg:flex-1 flex justify-evenly items-center space-x-1">
@@ -77,7 +77,7 @@ export default function ProfileCard() {
         placeholder="@yourname"
       />
       <div className="w-full space-y-1">
-        <label className="text-sm text-white font-nunito">
+        <label className="text-sm text-gray-800 dark:text-white font-nunito">
           Profile Description
         </label>
         <textarea
@@ -89,7 +89,7 @@ export default function ProfileCard() {
               value: e.target.value,
             })
           }
-          className="w-full p-2 px-4 bg-primary text-white outline-none rounded-md"
+          className="w-full p-2 px-4 dark:bg-primary bg-gray-200 text-gray-800 dark:text-white outline-none rounded-md"
           placeholder="Bio"
         ></textarea>
       </div>

@@ -7,7 +7,7 @@ const initialState = {
   links: [],
   appearance: {
     background: "",
-    backgroundColor: "#070707",
+    backgroundColor: "#000000",
     font: "Nunito",
     fontColor: "#e5e5e5",
     linkStyle: {
@@ -16,7 +16,7 @@ const initialState = {
       shadow: false,
       special: "",
     },
-    linkColor: "#171717",
+    linkColor: "#212529",
     linkFontColor: "#fff",
   },
   socials: {

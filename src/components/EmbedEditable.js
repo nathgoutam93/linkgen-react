@@ -84,9 +84,9 @@ export default function EmbedEditable({ id, Link }) {
           className="w-full py-2 flex justify-between items-center first-of-type:mt-2 last-of-type:mb-2 cursor-pointer"
         >
           <div
-            className={`flex flex-1 bg-secondary rounded-xl border border-border-dark ${
+            className={`flex flex-1 bg-white dark:bg-secondary rounded-xl border border-gray-300 dark:border-border-dark ${
               snapshot.isDragging ? "shadow-2xl" : ""
-            } border-r border-border-dark`}
+            }`}
           >
             {!editMode ? (
               <div className="p-2 flex-1 flex">
@@ -94,15 +94,24 @@ export default function EmbedEditable({ id, Link }) {
                   onClick={() => setEditMode(true)}
                   className={`px-4 flex justify-center items-center flex-1`}
                 >
-                  <HiOutlinePencil size={25} className="text-border-dark" />
+                  <HiOutlinePencil
+                    size={25}
+                    className="text-gray-400 dark:text-border-dark"
+                  />
                   <div className="p-2 flex-1 flex flex-col items-center space-y-1">
                     {Link.embed === EMBED.YOUTUBE && (
-                      <AiFillYoutube size={45} className="text-border-dark" />
+                      <AiFillYoutube
+                        size={45}
+                        className="text-gray-400 dark:text-border-dark"
+                      />
                     )}
                     {Link.embed === EMBED.SPOTIFY && (
-                      <BsSpotify size={45} className="text-border-dark" />
+                      <BsSpotify
+                        size={45}
+                        className="text-gray-400 dark:text-border-dark"
+                      />
                     )}
-                    <p className="flex-1 text-sm text-white text-center font-semibold">
+                    <p className="flex-1 text-sm text-gray-800 dark:text-white text-center font-semibold">
                       {Link.title}
                     </p>
                   </div>
@@ -127,12 +136,12 @@ export default function EmbedEditable({ id, Link }) {
                   <GoTrashcan
                     size={25}
                     onClick={handleRemoveLink}
-                    className="text-border-dark cursor-pointer"
+                    className="text-gray-400 dark:text-border-dark cursor-pointer"
                   />
                 </div>
               </div>
             ) : (
-              <div className="p-4 flex flex-1 flex-col space-y-4 bg-secondary rounded-xl">
+              <div className="p-4 flex flex-1 flex-col space-y-4 bg-white dark:bg-secondary rounded-xl">
                 <InputField
                   label="Title"
                   value={title}
@@ -161,9 +170,12 @@ export default function EmbedEditable({ id, Link }) {
             )}
             <div
               {...provided.dragHandleProps}
-              className=" py-2 flex justify-center items-center border-l border-border-dark"
+              className=" py-2 flex justify-center items-center border-l border-gray-300 dark:border-border-dark"
             >
-              <MdDragIndicator size={40} className="text-border-dark" />
+              <MdDragIndicator
+                size={40}
+                className="text-gray-400 dark:text-border-dark"
+              />
             </div>
           </div>
         </div>
