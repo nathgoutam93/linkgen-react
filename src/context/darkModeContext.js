@@ -8,13 +8,7 @@ export function useDarkMode() {
 }
 
 export function DarkModeProvider({ children }) {
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    if (JSON.parse(localStorage.getItem("dark"))) {
-      setDark(JSON.parse(localStorage.getItem("dark")));
-    }
-  }, []);
+  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")));
 
   useEffect(() => {
     if (dark) {
@@ -22,7 +16,6 @@ export function DarkModeProvider({ children }) {
     } else {
       window.document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("dark", JSON.stringify(dark));
   }, [dark]);
 
   const value = { dark, setDark };

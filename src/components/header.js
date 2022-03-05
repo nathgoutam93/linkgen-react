@@ -8,6 +8,7 @@ function Header() {
 
   const handleDark = () => {
     setDark(!dark);
+    localStorage.setItem("dark", JSON.stringify(!dark));
   };
 
   return (
