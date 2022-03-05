@@ -44,7 +44,7 @@ export default function App() {
           preview ? "" : "lg:grid-cols-2"
         } bg-gray-100 dark:bg-primary font-nunito`}
       >
-        <div className={`w-full p-4  pb-96 ${preview && "hidden"} space-y-4`}>
+        <div className={`w-full p-4  pb-96 ${preview && "hidden"}`}>
           {showDesign ? <Appearance /> : <Editor />}
         </div>
 

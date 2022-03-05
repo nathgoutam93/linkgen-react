@@ -11,8 +11,10 @@ import { BsSpotify } from "react-icons/bs";
 import InputField from "./commons/inputField";
 
 export default function EmbedEditable({ id, Link }) {
-  const { state, dispatch } = useAdmin();
-  const { links } = state;
+  const {
+    state: { links },
+    dispatch,
+  } = useAdmin();
 
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");

@@ -45,7 +45,7 @@ export default function EmbedModal() {
   };
 
   return (
-    <div className="w-10/12 max-w-lg p-4 bg-secondary flex flex-col font-nunito rounded-xl space-y-2">
+    <div className="w-10/12 max-w-lg p-4 bg-white dark:bg-secondary flex flex-col font-nunito rounded-xl space-y-2">
       <button
         onClick={handleYouTube}
         className="w-full h-12 p-4 flex justify-center items-center bg-red-600 text-white rounded-xl space-x-4"

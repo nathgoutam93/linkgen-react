@@ -3,7 +3,10 @@ import { useAdmin } from "../context/adminContext";
 import InputField from "./commons/inputField";
 
 export default function SocialIconCard() {
-  const { state, dispatch } = useAdmin();
+  const {
+    state: { socials },
+    dispatch,
+  } = useAdmin();
   const {
     twitter,
     instagram,
@@ -14,7 +17,7 @@ export default function SocialIconCard() {
     devto,
     medium,
     whatsapp,
-  } = state.socials;
+  } = socials;
 
   return (
     <div className="w-full p-5 flex flex-col items-center bg-white dark:bg-secondary space-y-4 rounded-xl border border-gray-300 dark:border-border-dark">
@@ -28,7 +31,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, twitter: e.target.value },
+            value: { ...socials, twitter: e.target.value },
           })
         }
       />
@@ -39,7 +42,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, instagram: e.target.value },
+            value: { ...socials, instagram: e.target.value },
           })
         }
       />
@@ -50,7 +53,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, facebook: e.target.value },
+            value: { ...socials, facebook: e.target.value },
           })
         }
       />
@@ -61,7 +64,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, linkedin: e.target.value },
+            value: { ...socials, linkedin: e.target.value },
           })
         }
       />
@@ -72,7 +75,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, github: e.target.value },
+            value: { ...socials, github: e.target.value },
           })
         }
       />
@@ -83,7 +86,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, hashnode: e.target.value },
+            value: { ...socials, hashnode: e.target.value },
           })
         }
       />
@@ -94,7 +97,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, devto: e.target.value },
+            value: { ...socials, devto: e.target.value },
           })
         }
       />
@@ -105,7 +108,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, medium: e.target.value },
+            value: { ...socials, medium: e.target.value },
           })
         }
       />
@@ -116,7 +119,7 @@ export default function SocialIconCard() {
           dispatch({
             type: "field",
             field: "socials",
-            value: { ...state.socials, whatsapp: e.target.value },
+            value: { ...socials, whatsapp: e.target.value },
           })
         }
       />

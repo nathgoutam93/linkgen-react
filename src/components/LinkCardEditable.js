@@ -8,8 +8,10 @@ import PropTypes from "prop-types";
 import InputField from "./commons/inputField";
 
 export default function LinkCardEditable({ id, Link }) {
-  const { state, dispatch } = useAdmin();
-  const { links } = state;
+  const {
+    state: { links },
+    dispatch,
+  } = useAdmin();
 
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
