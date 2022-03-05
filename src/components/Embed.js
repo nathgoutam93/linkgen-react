@@ -22,7 +22,7 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
         }}
         className={`relative w-full max-w-4xl min-h-[4rem] p-2 flex flex-col justify-center items-center ${
           linkStyle.rounded ? "rounded-3xl" : "rounded-md"
-        } space-y-2`}
+        } space-y-2 hover:scale-105 transition-transform duration-300`}
       >
         <img
           src={`https://img.youtube.com/vi/${
@@ -44,7 +44,7 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
         }}
         className={`relative w-full max-w-4xl min-h-[4rem] p-4 flex flex-col justify-center items-center ${
           linkStyle.rounded ? "rounded-3xl" : "rounded-md"
-        } space-y-2`}
+        } space-y-2 hover:scale-105 transition-transform duration-300`}
       >
         <iframe
           style={{ borderRadius: "12px" }}
@@ -67,7 +67,7 @@ export default function Embed({ link, linkStyle, linkColor, linkFontColor }) {
       }}
       className={`relative w-full max-w-4xl min-h-[4rem] p-4 flex flex-col justify-center items-center ${
         linkStyle.rounded ? "rounded-3xl" : "rounded-md"
-      } space-y-2`}
+      } space-y-2 hover:scale-105 transition-transform duration-300`}
     >
       Invalid Link
     </div>

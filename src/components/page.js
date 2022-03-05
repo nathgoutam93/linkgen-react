@@ -97,7 +97,10 @@ export default function Page({
             target="_blank"
             href={`https://twitter.com/${socials.twitter}`}
           >
-            <FiTwitter size={45} className="m-2" />
+            <FiTwitter
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.instagram && (
@@ -106,17 +109,26 @@ export default function Page({
             target="_blank"
             href={`https://instagram.com/${socials.instagram}`}
           >
-            <FiInstagram size={45} className="m-1" />
+            <FiInstagram
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.facebook && (
           <a rel="noreferrer" target="_blank" href={socials.facebook}>
-            <FiFacebook size={45} className="m-1" />
+            <FiFacebook
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.linkedin && (
           <a rel="noreferrer" target="_blank" href={socials.linkedin}>
-            <FiLinkedin size={45} className="m-1" />
+            <FiLinkedin
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.github && (
@@ -125,7 +137,10 @@ export default function Page({
             target="_blank"
             href={`https://github.com/${socials.github}`}
           >
-            <FiGithub size={45} className="m-1" />
+            <FiGithub
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.hashnode && (
@@ -134,7 +149,10 @@ export default function Page({
             target="_blank"
             href={`https://hashnode.com/@${socials.hashnode}`}
           >
-            <SiHashnode size={45} className="m-1" />
+            <SiHashnode
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.devto && (
@@ -143,7 +161,10 @@ export default function Page({
             target="_blank"
             href={`https://dev.to/@${socials.devto}`}
           >
-            <FaDev size={45} className="m-1" />
+            <FaDev
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.medium && (
@@ -152,7 +173,10 @@ export default function Page({
             target="_blank"
             href={`https://medium.com/@${socials.devto}`}
           >
-            <GrMedium size={45} className="m-1" />
+            <GrMedium
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
         {socials.whatsapp && (
@@ -161,7 +185,10 @@ export default function Page({
             target="_blank"
             href={`https://api.whatsapp.com/send?phone=${socials.whatsapp}`}
           >
-            <ImWhatsapp size={45} className="m-1" />
+            <ImWhatsapp
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
           </a>
         )}
       </div>

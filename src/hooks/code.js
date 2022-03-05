@@ -113,6 +113,11 @@ function useCode() {
         text-decoration: none;
         font-family: Nunito;
       }
+
+      .link-container:hover {
+        transform: scaleX(1.05) scaleY(1.05);
+        transition: 300ms transform cubic-bezier(0.4, 0, 0.2, 1);
+      }
   
       .link-card {
         width: 100%;
@@ -145,10 +150,17 @@ function useCode() {
         align-items: center;
         flex-wrap: wrap;
       }
+      
       .social-icon{
         margin: 0.5rem;
         color: ${fontColor}
       }
+
+      .social-icon:hover {
+        transform: scaleX(1.1) scaleY(1.1);
+        transition: 200ms transform cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
       </style>
       <body>
         ${renderToStaticMarkup(

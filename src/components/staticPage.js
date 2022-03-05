@@ -36,7 +36,7 @@ function Embed({ link }) {
 
   const spotifyRegex = /(?<=(com\/))(?:...)+/;
 
-  if (link.embed === EMBED.YOUTUBE)
+  if (link.embed === EMBED.YOUTUBE && !!youtubeRegex.exec(link.link))
     return (
       <a
         href={`https://www.youtube.com/watch?v=${
@@ -60,22 +60,24 @@ function Embed({ link }) {
       </a>
     );
 
-  return (
-    <div className="link-container">
-      <div className="link-card">
-        <iframe
-          style={{ borderRadius: "12px" }}
-          src={`https://open.spotify.com/embed/${
-            spotifyRegex.exec(link.link)[0]
-          }`}
-          width="100%"
-          height="80"
-          frameBorder="0"
-        ></iframe>
-        <p className="link-description">{link.title}</p>
+  if (link.embed === EMBED.SPOTIFY && !!spotifyRegex.exec(link.link))
+    return (
+      <div className="link-container">
+        <div className="link-card">
+          <iframe
+            style={{ borderRadius: "12px" }}
+            src={`https://open.spotify.com/embed/${
+              spotifyRegex.exec(link.link)[0]
+            }`}
+            width="100%"
+            height="80"
+            frameBorder="0"
+          ></iframe>
+          <p className="link-description">{link.title}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  return <div className="link-container">Invalid Link</div>;
 }
 
 export default function StaticPage({
