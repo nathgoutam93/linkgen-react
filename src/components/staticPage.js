@@ -192,7 +192,7 @@ export default function StaticPage({
             rel="noreferrer"
             target="_blank"
             className="social-icon"
-            href={`https://medium.com/${socials.devto}`}
+            href={`https://medium.com/${socials.medium}`}
           >
             <GrMedium size={45} className="m-2" />
           </a>
