@@ -3,7 +3,7 @@ import LinkCard from "../components/LinkCard";
 import PropTypes from "prop-types";
 import { BsPersonFill } from "react-icons/bs";
 import { SiHashnode } from "react-icons/si";
-import { FaDev } from "react-icons/fa";
+import { FaDev, FaTiktok } from "react-icons/fa";
 import { GrMedium } from "react-icons/gr";
 import { ImWhatsapp } from "react-icons/im";
 import {
@@ -186,6 +186,18 @@ export default function Page({
             href={`https://api.whatsapp.com/send?phone=${socials.whatsapp}`}
           >
             <ImWhatsapp
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
+          </a>
+        )}
+        {socials.tiktok && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://www.tiktok.com/${socials.tiktok}`}
+          >
+            <FaTiktok
               size={45}
               className="m-1 hover:scale-110 transition-transform duration-200"
             />

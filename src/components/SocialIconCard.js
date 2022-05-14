@@ -17,6 +17,7 @@ export default function SocialIconCard() {
     devto,
     medium,
     whatsapp,
+    tiktok,
   } = socials;
 
   return (
@@ -120,6 +121,17 @@ export default function SocialIconCard() {
             type: "field",
             field: "socials",
             value: { ...socials, whatsapp: e.target.value },
+          })
+        }
+      />
+      <InputField
+        label="tiktok handle"
+        value={tiktok}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "socials",
+            value: { ...socials, tiktok: e.target.value },
           })
         }
       />
