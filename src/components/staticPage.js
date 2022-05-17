@@ -13,6 +13,7 @@ import {
   FiInstagram,
   FiFacebook,
 } from "react-icons/fi";
+import { AiFillYoutube } from "react-icons/ai";
 
 function LinkCard({ link }) {
   return (
@@ -215,6 +216,16 @@ export default function StaticPage({
             href={`https://www.tiktok.com/${socials.tiktok}`}
           >
             <FaTiktok size={45} className="m-2" />
+          </a>
+        )}
+        {socials.youtube && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="social-icon"
+            href={`https://www.youtube.com/${socials.youtube}`}
+          >
+            <AiFillYoutube size={45} className="m-2" />
           </a>
         )}
       </div>

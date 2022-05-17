@@ -13,6 +13,7 @@ import {
   FiInstagram,
   FiFacebook,
 } from "react-icons/fi";
+import { AiFillYoutube } from "react-icons/ai";
 import Embed from "./Embed";
 
 export default function Page({
@@ -198,6 +199,18 @@ export default function Page({
             href={`https://www.tiktok.com/${socials.tiktok}`}
           >
             <FaTiktok
+              size={45}
+              className="m-1 hover:scale-110 transition-transform duration-200"
+            />
+          </a>
+        )}
+        {socials.youtube && (
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://www.youtube.com/${socials.youtube}`}
+          >
+            <AiFillYoutube
               size={45}
               className="m-1 hover:scale-110 transition-transform duration-200"
             />

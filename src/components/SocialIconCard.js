@@ -18,6 +18,7 @@ export default function SocialIconCard() {
     medium,
     whatsapp,
     tiktok,
+    youtube,
   } = socials;
 
   return (
@@ -132,6 +133,17 @@ export default function SocialIconCard() {
             type: "field",
             field: "socials",
             value: { ...socials, tiktok: e.target.value },
+          })
+        }
+      />
+      <InputField
+        label="youtube handle"
+        value={youtube}
+        onChange={(e) =>
+          dispatch({
+            type: "field",
+            field: "socials",
+            value: { ...socials, youtube: e.target.value },
           })
         }
       />
